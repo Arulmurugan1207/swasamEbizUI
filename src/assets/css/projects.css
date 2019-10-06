@@ -1,0 +1,606 @@
+.filter_title,
+.remove {
+    font-size: 20px
+}
+
+.product,
+.wishBook {
+    text-align: center;
+    float: left;
+    display: table; 
+    
+}
+
+.table {
+    margin-bottom: 0
+}
+
+.remove {
+    line-height: 20px!important;
+    border: 0!important;
+    cursor: pointer
+}
+
+#offers-list,
+#projects-list {
+    border-left: 1px solid #ccc;
+    margin-left: -1px
+}
+
+.list-group-item {
+    margin-bottom: 5px;
+    padding: 0;
+    border: none
+}
+
+.list-group-item:first-child,
+.list-group-item:last-child {
+    border-radius: 0
+}
+
+.list-group-item a {
+    margin: 0;
+    padding: 7px 15px;
+    display: block
+}
+
+.sidebar .list-group-item a {
+    margin: 0;
+    padding: 0 15px;
+    display: block;
+    color: #000;
+    text-decoration: none
+}
+
+.addCart-container .bookinfo.originalprice,
+.original-price,
+.wishCart-container .bookinfo.originalprice {
+    text-decoration: line-through
+}
+
+.sidebar .list-group-item a:hover {
+    color: rgba(219, 33, 70, 1)
+}
+
+.clearFilter {
+    position: absolute;
+    z-index: 9;
+    right: 45px;
+    top: -25px;
+    cursor: pointer
+}
+
+.clearFilter.clearAll {
+    right: 50px;
+    top: 0;
+    font-weight: 700
+}
+
+.loadMore-left {
+    display: none
+}
+
+.loadMore {
+    clear: both
+}
+
+.loadMore .btn-primary {
+    color: #fff;
+    background-color: #3B5998;
+    border-color: #adadad
+}
+
+.loadMore .btn-primary:hover {
+    background-color: #004bcc
+}
+
+.clearFilter:hover {
+    color: rgba(219, 33, 70, 1)
+}
+
+.list-group-item .checkbox label {
+    display: block
+}
+
+.product {
+    padding: 0;
+    overflow: hidden;
+    transition: all .25s
+}
+
+#projects-list .product:hover {
+    
+    position: relative;
+    z-index: 99
+}
+
+.product a {
+    display: inline-block;
+    cursor: pointer
+}
+
+.product-inner-container {
+    margin: 10px auto;
+    background: #fff;
+    position: relative;
+    overflow: hidden;
+    border-radius: 0;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    display: table;
+    background: #f1ecec;
+    min-width: 225px;
+}
+.product-inner-container::before,
+.product-inner-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-color: transparent;
+    border-style: solid;
+}
+
+.product-inner-container::before {
+    border-width: 1.5em;
+    border-right-color: #ccc;
+    border-top-color: #ccc;
+}
+
+.product-inner-container::after {
+    border-radius: 0;
+    border-width: 1.35em;
+    border-right-color: #fc8019;
+    border-top-color: #fc8019
+}
+.price-offer-container {
+    padding: 5px 0 10px;
+    font-size: 18px;
+    font-weight: 700;
+    display: inline-block
+}
+
+.price-cont {
+    margin-left: 20px;
+    position: relative
+}
+
+#offers-list .price {
+    margin-left: -5px
+}
+
+.original-price {
+    position: absolute;
+    top: -15px;
+    left: -10px;
+    font-weight: 400;
+    font-size: 14px;
+    color: #999;
+    min-width: 50px
+}
+
+.age-cont {
+    margin-right: 5px
+}
+
+.type-cont {
+    font-size: 13px;
+    font-weight: 400
+}
+
+.product-dtls {
+    padding-bottom: 10px
+}
+.hc-title {
+    padding: 15px 10px;
+    margin: 0;
+}
+.product-title {
+    line-height: 15px;
+    height: 40px;
+    text-align: left;
+    padding: 0 20px;
+    max-width: 225px;
+}
+
+.product-dtls .fa:before {
+    font-size: 25px
+}
+
+.addCart-container .bookinfo.bold,
+.total,
+.wishCart-container .bookinfo.bold {
+    font-size: 18px;
+    font-weight: 700
+}
+
+.product-dtls .fa-heart-o {
+    float: left;
+    color: rgba(219, 33, 70, 1)
+}
+
+.product-dtls .fa-cart-plus {
+    float: right;
+    color: #00338d
+}
+
+.product img {
+    width: 172px;
+    height: 250px
+}
+
+.product .add-cart {
+    background: 0 0;
+    position: absolute;
+    float: none;
+    left: -15px;
+    bottom: -15px;
+    margin: 15px;
+    height: 100%;
+    transition: all .25s;
+    width: 100%;
+    padding: 15px;
+    border-radius: 5px
+}
+
+.product .add-cart .btn-add-cart,
+.product .add-cart .btn-whish-list {
+    position: relative;
+    transition: all .25s;
+    box-shadow: 0 0 5px 5px #fff
+}
+
+.product .add-cart .btn-add-cart {
+    bottom: 22%
+}
+
+.product .add-cart .btn-whish-list {
+    bottom: -105%
+}
+
+.product:hover .product-inner-container {
+    border: 1px solid #000
+}
+
+.product:hover .add-cart {
+    background: rgba(0, 0, 0, .095)
+}
+
+.product:hover .add-cart .btn-add-cart {
+    bottom: -40%;
+    margin-top: -23px;
+    z-index: 99
+}
+
+.product:hover .add-cart .btn-whish-list {
+    bottom: -55%;
+    margin-top: -23px;
+    z-index: 99
+}
+
+.product:hover .product-dtls .fa {
+    transform: scale(1.3)
+}
+
+.product:hover .product-dtls .fa-cart-plus,
+.product:hover .product-dtls .fa-heart-o {
+    cursor: pointer
+}
+
+.product-dtls .fa-heart-o.added {
+    color: rgba(219, 33, 70, 1);
+    cursor: pointer;
+    box-shadow: 0 0 9px #000;
+    border-radius: 50%;
+    padding: 4px 3px 2px;
+    margin-top: -6px;
+    text-shadow: none
+}
+
+.product-dtls .fa-cart-plus.added {
+    color: #00338d;
+    cursor: pointer;
+    box-shadow: 0 0 9px #000;
+    border-radius: 50%;
+    padding: 3px 6px 2px 3px;
+    margin-top: -5px
+}
+
+.addCart-container,
+.wishCart-container {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc
+}
+
+.addCart-container:last-child,
+.wishCart-container:last-child {
+    border-bottom: 0;
+    padding-bottom: 0;
+    float: none;
+    display: table;
+}
+
+.wishBook img {
+    width: 60px;
+    height: auto
+}
+
+.wish-btnsGroup {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    left: 75%
+}
+
+.wish-btnsGroup .fa {
+    position: absolute;
+    left: 15px;
+    top: 13px
+}
+
+.wishCart-container .wish-btnsGroup .btn {
+    display: block;
+    min-width: 185px;
+    text-align: left;
+    padding-left: 40px;
+    position: relative
+}
+
+.addCart-container .wish-btnsGroup .btn {
+    min-width: 240px;
+    text-align: left;
+    padding-left: 40px;
+    position: relative
+}
+
+.addCart-container .wish-btnsGroup .btn .fa {
+    left: 17px
+}
+
+.wish-btnsGroup .btn+.btn {
+    margin-top: 25px
+}
+
+.addCart-container .label,
+.wishCart-container .label {
+    color: grey
+}
+
+[data-offer=YES] .offerYes,
+[data-offer=NO] .offerNo {
+    display: inline
+}
+
+[data-offer=YES] .offerNo,
+[data-offer=NO] .offerYes {
+    display: none
+}
+
+.wish-title {
+    margin-left: 45px
+}
+
+.total {
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    background: #f2f2f2;
+    padding: 15px;
+    margin: 15px 0
+}
+
+@media (min-width:768px) {
+    .clearFilter {
+        position: absolute;
+        z-index: 9;
+        right: 15px;
+        top: -25px;
+        cursor: pointer
+    }
+    .loadMore-left {
+        width: 20%;
+        display: block
+    }
+    .loadMore {
+        clear: none;
+        width: 80%
+    }
+    .filter_title,
+    .product-dtls .fa:before {
+        font-size: 20px
+    }
+    .clearFilter.clearAll {
+        top: 15px;
+        right: 15px;
+    }
+    .product-inner-container {
+        margin: 10px auto;
+        background: #fff;
+        position: relative;
+        overflow: hidden;
+        border-radius: 0;
+        border: 1px solid #ccc;
+        font-size: 14px;
+        display: table;
+        background: #f1ecec;
+        min-width: 195px;
+    }
+}
+@media (min-width:992px) {
+    .product-inner-container {
+       
+        min-width: 225px;
+    }
+}
+@media (min-width:1200px) {
+    #offers-list,
+    #projects-list {
+        width: 80%
+    }
+}
+
+@media (max-width:480px) {
+    .bookOffers .col-xs-6.product {
+        width: 100%
+    }
+    .bookOffers .product a {
+        display: block;
+        width: 40%;
+        float: left
+    }
+    .bookOffers .product-info-container {
+        width: 60%;
+        float: left;
+        margin-top: 5px
+    }
+    .bookOffers #projects-list .product:hover {
+        
+        position: relative;
+        z-index: 99
+    }
+    .bookOffers .product-dtls {
+        position: absolute;
+        width: 60%;
+        right: 0;
+        top: 5px
+    }
+    .bookOffers .price-offer-container {
+        display: block;
+        width: 100%;
+        text-align: left;
+        padding: 5px 10px;
+        font-size: 13px;
+        font-weight: 700
+    }
+    .bookOffers .age-cont,
+    .bookOffers .price-cont {
+        margin: 0
+    }
+    .bookOffers .age-cont {
+        padding-top: 0
+    }
+    .bookOffers .product-title {
+        text-align: left;
+        padding-left: 10px;
+        margin-top: 47px;
+        min-height: auto;
+        font-size: 13px;
+        font-weight: 700
+    }
+    .bookOffers .image-wrap {
+        padding: 10px 0 10px 10px;
+        display: inline-block
+    }
+    .age,
+    .booktype {
+        font-weight: 400
+    }
+    .bookOffers .product img {
+        width: 100%;
+        height: auto
+    }
+    .bookOffers [data-offer=YES] .offer {
+        width: 50px;
+        height: 50px;
+        left: -5px;
+        top: -3px;
+        font-size: 18px;
+        padding: 11px 12px
+    }
+    .wish-btnsGroup {
+        top: -90px;
+        left: 70%;
+        padding: 0
+    }
+    .addCart-container .wish-btnsGroup .btn,
+    .wishCart-container .wish-btnsGroup .btn {
+        min-width: 165px;
+        font-size: 16px;
+        padding: 5px 10px 5px 35px;
+        line-height: 1.3333333
+    }
+    .wishBook {
+        text-align: center;
+        padding-bottom: 10px;
+        display: inline-block
+    }
+    .wishBook img {
+        width: 112px;
+        height: auto
+    }
+    .wish-title {
+        margin-left: 15px;
+        font-size: 25px
+    }
+    .cartlist [data-block],
+    .wishlist [data-block] {
+        padding: 15px 0
+    }
+    .wish-btnsGroup .fa {
+        position: absolute;
+        left: 10px;
+        top: 7px
+    }
+    .wishCart-infoGroup {
+        padding: 0
+    }
+    .addCart-container,
+    .wishCart-container {
+        padding-top: 20px
+    }
+    .removeWishcart {
+        margin-bottom: 15px
+    }
+    .booksContainer [data-offer=YES] .original-price {
+        display: block;
+        position: static
+    }
+}
+.tooltip-inner {
+    padding: 10px;
+    max-width: 500px;
+}
+.classType {
+    background-color: #3B5998;
+    padding: 20px;
+    margin: 15px;
+    color: #fff !important;
+    text-align: center;
+    text-transform: uppercase;
+    display: block;
+    text-decoration: none !important;
+    cursor: pointer;
+
+}
+.classType.active {
+    background-color: #5cb85c;    
+    padding: 10px 15px !important;
+}
+.sidebar .class .list-group-item {
+    float: left;
+    padding: 2px;
+}
+.sidebar .class .list-group-item .classType {
+    width: 90px;
+    padding: 10px;
+}
+.filter_title a.active {
+    text-decoration: none;
+    color: #5cb85c;
+    pointer-events: none;
+}
+
+.originalPrice {
+    text-decoration: line-through;
+    font-size: 15px;
+    color: #a09191;
+    font-weight: normal;
+    padding: 15px;
+}
+[data-block="contact-info"] .nav-justified{
+    margin-bottom: 10px;
+}
+[data-block="contact-info"] .nav-justified li a.active{
+    background: #5cb85c;
+    color: #fff;
+}

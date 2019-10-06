@@ -1,0 +1,26 @@
+
+@font-face {
+	font-family: 'Roboto';
+    src: url('fonts/Roboto-Black.ttf') format('truetype');
+	src: url('fonts/Roboto-BlackItalic.ttf') format('truetype');
+	src: url('fonts/Roboto-Bold.ttf') format('truetype');
+	src: url('fonts/Roboto-BoldItalic.ttf') format('truetype');
+	src: url('fonts/Roboto-Italic.ttf') format('truetype');
+	src: url('fonts/Roboto-Light.ttf') format('truetype');
+	src: url('fonts/Roboto-LightItalic.ttf') format('truetype');
+	src: url('fonts/Roboto-Medium.ttf') format('truetype');
+	src: url('fonts/Roboto-MediumItalic.ttf') format('truetype');
+	src: url('fonts/Roboto-Regular.ttf') format('truetype');	
+	src: url('fonts/Roboto-Regular-Thin.ttf') format('truetype');	
+	src: url('fonts/Roboto-Regular-ThinItalic.ttf') format('truetype');	
+	
+    font-family: 'RobotoCondensed';
+    src: url('fonts/RobotoCondensed-Bold.ttf') format('truetype');
+	src: url('fonts/RobotoCondensed-BoldItalic.ttf') format('truetype');
+	src: url('fonts/RobotoCondensed-Italic.ttf') format('truetype');
+	src: url('fonts/RobotoCondensed-Light.ttf') format('truetype');
+	src: url('fonts/RobotoCondensed-LightItalic.ttf') format('truetype');
+	src: url('fonts/RobotoCondensed-Regular.ttf') format('truetype');
+	
+
+}

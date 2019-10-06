@@ -1,0 +1,222 @@
+
+
+
+.btn{
+	font-size: 16px;
+}
+.form-control {
+	    font-size: 16px;
+}
+
+b, strong {
+    font-weight: normal;
+}
+
+.menu-opened .navbar-default {    
+    left: 0;
+    overflow-y: scroll;
+    border-right: .5px inset #ccc;
+    margin-top: 50px;
+    height: 100%;
+}
+.menu-opened .filters {
+	display: none;
+}
+.header-nav {
+	float: none;
+	margin: 0 auto;
+	
+}
+.menu-opened {
+	margin-left: 255px;
+	overflow-x: hidden;
+	width: 100%;
+}
+.list-group {
+	position: relative;
+}
+.navbar-default .navbar-nav>li a {     
+    text-align: left;
+	text-transform: uppercase;
+	color: #000;
+	background: #fff;
+	border-bottom: .5px inset #ccc;
+
+}
+.navbar-default .navbar-nav .list-group-item a {     
+    text-align: left;    
+    text-decoration: none;
+    color: #000;
+    padding-left: 40px;
+}
+.navbar-default .navbar-nav .list-group-item a:hover {
+    
+	background:#e8daef;
+	color: #000;
+}
+.navbar-default .navbar-nav>li:hover>a {	
+	background:#e8daef;
+	color: #000;
+}
+.navbar-default .navbar-nav>.active>a, 
+.navbar-default .navbar-nav>.active>a:focus, 
+.navbar-default .navbar-nav>.active>a:hover {
+	background:#e8daef;
+	color: #000;
+}
+.navbar-default .navbar-nav>.active:before {
+	content: '';
+	height: 0px;
+	width: 100%;
+	position: absolute;
+	display: block;
+	left: 0;
+	bottom: -2px;	
+	background-color: #fff;
+	z-index: 999;
+}
+.navbar-nav>li>ul {	
+	width: auto;
+	display: block;
+	margin-bottom: 0;  
+}
+
+.navbar-nav>li>ul>li {
+	border-left: 0;
+	margin:0;
+	border: 1px solid #fff;
+	margin-top: -1px;	
+}
+.navbar-nav>li>ul>li:first-child {
+  margin-top: 0;
+}
+
+.main-menu .navbar-nav>li {
+    float: left;
+    width: 100%;
+}
+/*
+@media (min-width: 768px) {
+
+	.navbar-default {
+		font-size: 11px;
+		position: static;
+		width: auto;
+		background: url(../images/Header/Menubar.jpg);
+	}
+	.header-nav {		
+		max-width: 100%;
+		display: table;
+	}
+	.nav>li>a {
+		padding: 10px 11px;
+	}
+	.navbar-nav>li>ul:not(.myAcc-details) {
+		position: absolute;
+		width: 250px;
+		display: none;
+		z-index: 1500;
+	}
+	.navbar-default .navbar-nav>li a {
+		text-align: center;
+	}
+	.navbar-default .navbar-nav>li a {     
+	    text-align: center;
+		text-transform: uppercase;
+		color: #fff;
+		background: none;
+		border-bottom: 0;
+	}
+	.navbar-default .navbar-nav .list-group-item a {     
+	    text-align: left;    
+	    text-decoration: none;
+	    color: #fff;
+	    background: url(../images/Header/SubMenubar.jpg);
+	    padding-left: 10px;
+	}
+	.navbar-default .navbar-nav>.active:before {		
+		height: 2px;		
+	}
+	.navbar-default .navbar-nav>.active>a, 
+	.navbar-default .navbar-nav>.active>a:focus, 
+	.navbar-default .navbar-nav>.active>a:hover {
+		color: #DB2146;
+		background:#e8daef;
+	}
+}
+@media (min-width: 992px) {
+	
+	.navbar-default .navbar-nav>li a {   
+	    min-width: 130px;	    
+	}
+	.navbar-default {
+		font-size: 14px;
+		font-weight:normal;
+	}
+
+	.nav>li>a {
+		padding: 10px 15px;
+	}
+}*/
+
+@media (min-width: 1200px) {
+	.header-nav {
+		max-width: 1200px;
+	}
+	.navbar-default .navbar-nav>li a {   
+	    min-width: 170px;	    
+	}
+
+}
+
+.myAcc-details {		
+	background-color: #fff;
+    border-bottom: 1px solid #fff;
+    z-index: 99;
+    margin-bottom: 0;
+    width: 175px !important;
+    height: 100%;
+    top: 40px;    
+    border: 1px solid;
+	right: -25px;
+	position: absolute;  
+	display: none !important; 
+	-webkit-animation-name: zoom;
+            -webkit-animation-duration: .26s;
+            animation-name: zoom;
+            animation-duration: .26s    
+}
+
+.myAcc-details li a {
+	padding: 10px;
+	text-decoration: none !important;
+	cursor: pointer;
+}
+.myself:hover .myAcc-details {
+	display: block !important;
+}
+.caret-8 {    
+    border-top: 8px dashed;
+    border-top: 8px solid\9;
+    border-right: 8px solid transparent;
+	border-left: 8px solid transparent;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%) rotate(180deg);
+	top: -8px;
+}
+.cart-success {
+	position: absolute;
+    width: 320px;
+    left: 50%;
+    margin-left: -165px;
+    margin-bottom: 0;
+    z-index: 99;
+    padding: 10px 5px;
+    top: 40px;
+	box-shadow: 0 1px 5px 3px;
+	-webkit-animation-name: zoom;
+            -webkit-animation-duration: .26s;
+            animation-name: zoom;
+            animation-duration: .26s
+}

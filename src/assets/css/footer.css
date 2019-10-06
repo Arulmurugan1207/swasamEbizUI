@@ -1,0 +1,189 @@
+footer {
+    color: #fff;
+    overflow: hidden;
+    display: block;
+    width: 100%
+}
+
+.btn-social-icon {
+    transition: all .5s
+}
+
+footer p.copyright {
+    margin: 0;
+    float: right
+}
+
+.footer-coppyright {
+    font-size: 12px
+}
+
+.footerUtilities {
+    height: auto;
+    background-size: cover;
+    background-position: center;
+    padding: 25px 0;
+    overflow: hidden;
+    background-color: #262626
+}
+
+.footerUtilities ul {
+    list-style: none;
+    padding: 0;
+    margin: 0
+}
+
+.footerTitle {
+    color: #e8554e
+}
+
+.footerUtilities ul li {
+    padding-bottom: 5px
+}
+
+.footerUtilities ul li a {
+    color: #fff;
+    background-color: transparent
+}
+
+.footerUtilities ul li a:focus,
+.footerUtilities ul li a:hover {
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none
+}
+
+.footer-social-icons ul li {
+    display: inline-block
+}
+
+.footer-social-icons ul .btn-social-icon {
+    background-color: rgba(0, 0, 0, .5);
+    width: 100px;
+    height: 100px;
+    border-radius: 0
+}
+
+.footer-social-icons ul .btn-social-icon:hover {
+    border-radius: 50%
+}
+
+.footer-social-icons ul .btn-facebook:hover {
+    background-color: #3b5998
+}
+
+.footer-social-icons ul .btn-twitter:hover {
+    background-color: #55acee
+}
+
+.footer-social-icons ul .btn-google:hover {
+    background-color: #dd4b39
+}
+
+.footer-social-icons ul .btn-whatsapp:hover {
+    background-color: #59ac23
+}
+
+.footer-social-icons .fa:before {
+    font-size: 50px;
+    line-height: 100px
+}
+
+.footerBar {
+    position: relative;
+    padding: 15px 0;
+    background: #292828;
+    overflow: hidden
+}
+
+.footerNavLinks ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none
+}
+
+.footerNavLinks ul li {
+    float: left;
+    padding: 0 20px;
+    border-right: 1px solid #fff
+}
+
+.footerNavLinks ul li:first-child {
+    padding-left: 0
+}
+
+.footerNavLinks ul li:last-child {
+    padding-right: 0;
+    border: none
+}
+
+.footer-bottom-wapper {
+    margin-top: 15px;
+    border-top: 1px groove #fff;
+    padding: 15px 15px 0
+}
+
+.footerUtilities ul.address li {
+    padding-bottom: 5px
+}
+
+.footerUtilities .widget-container:only-of-type {
+    font-size: 15px;
+    margin-top: 15px
+}
+
+.footerUtilities .widget-container::last-of-type {
+    margin-top: 0
+}
+
+.footerUtilities .widget-title {
+    font-size: 20px
+}
+
+.gototop {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 9999999;
+    display: none;
+    cursor: pointer;
+    font-size: 50px;
+    color: #abb2b9;
+    line-height: 50px
+}
+
+.gototop img {
+    width: 75px;
+    height: 75px
+}
+
+.customer_info {
+    padding: 15px
+}
+
+@media (min-width:768px) {
+    .footerUtilities .widget-container:only-of-type {
+        font-size: 14px;
+        margin-top: 0
+    }
+    .footerUtilities .widget-title {
+        font-size: 18px
+    }
+    .footer-bottom-wapper {
+        padding: 15px 0 0
+    }
+    .customer_info {
+        padding: 0 15px 15px
+    }
+}
+.login-bg {
+    background-image: url(../images/login-bg.jpg);
+    padding: 95px
+}
+.signup-bg {
+    background-image: url(../images/signup-bg.jpg);
+    padding: 40px;
+    
+    background-size: cover;
+}

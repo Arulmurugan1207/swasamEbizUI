@@ -1,0 +1,260 @@
+.kids-slider,
+.vertical-slider li {
+    overflow: hidden
+}
+
+.caption,
+.image-wrap {
+    display: inline-block
+}
+
+.caption {
+    background: rgba(0, 0, 0, .15);
+    padding: 35px 50px;
+    position: relative;
+    color: #fff;
+    max-width: 60%;
+    top: 25%;
+    left: -100%
+}
+
+.quote h1 {
+    line-height: 50px;
+    margin: 0
+}
+
+.quote .fa {
+    font-size: 20px
+}
+
+.quote .fa-quote-left {
+    padding-right: 10px;
+    margin-left: -25px
+}
+
+.quote .fa-quote-right {
+    padding-left: 10px
+}
+
+.bx-wrapper {
+    margin: 0 auto
+}
+
+.bx-wrapper .bx-controls-direction a {
+    width: 45px;
+    height: 70px;
+    top: 45%
+}
+
+.bx-wrapper .bx-next {
+    background: url(../images/Home/slide-arrow.png) -43px -2px no-repeat;
+    background-size: cover;
+    right: -27px
+}
+
+.bx-wrapper .bx-next:hover {
+    background-position: -43px -2px
+}
+
+.bx-wrapper .bx-prev {
+    background: url(../images/Home/slide-arrow.png) -2px -2px no-repeat;
+    background-size: cover;
+    left: -25px
+}
+
+.bx-wrapper .bx-prev:hover {
+    background-position: -2px -2px
+}
+
+.bx-wrapper .bx-pager.bx-default-pager a.active,
+.bx-wrapper .bx-pager.bx-default-pager a:hover {
+    background: #DB2146
+}
+
+.bx-wrapper .bx-pager.bx-default-pager a {
+    background: #FFF
+}
+
+.HomeSliderContainer {
+    overflow: hidden;
+    width: 100%
+}
+
+.HomeSliderContainer .bx-wrapper .bx-prev {
+    left: 10px
+}
+
+.HomeSliderContainer .bx-wrapper .bx-next {
+    right: 10px
+}
+
+.vertical-slider {
+    padding: 0
+}
+
+.kids-slider {
+    height: 425px;
+    background-size: cover
+}
+.kids-slider.slide1 {
+    background-image: url(../images/Home/sb-home-slide1A-1200.jpg);
+    background-size: 100% 100%
+}
+.kids-slider.slide2 {
+    background-image: url(../images/Home/sb-home-slide1-1200.jpg);
+    background-size: 100% 100%
+}
+
+.kids-slider.slide3 {
+    background-image: url(../images/Home/sb-home-slide2-1200.jpg);
+    background-size: 100% 100%
+}
+
+.kids-slider.slide4 {
+    background-image: url(../images/Home/sb-home-slide3-1200.jpg);
+    background-size: 100% 100%
+}
+
+.kids-slider.slide5 {
+    background-image: url(../images/Home/sb-home-slide4-1200.jpg);
+    background-size: 100% 100%
+}
+
+.image-wrap {
+    padding: 10px;
+}
+.product-info-container {
+    display: table;
+    background: #fff;
+    padding-top: 10px;
+    width: 100%;
+}
+.slider_link {
+    display: block;
+    height: 100%;
+    min-height: 100%
+}
+.promos {
+    list-style: none;
+    max-width: 1280px;
+    margin: auto;
+    float: none;
+    padding: 0;
+}
+@media (max-width:480px) {
+    .bx-wrapper .bx-next {
+        right: -20%
+    }
+	.kids-slider.slide1 {
+		background-image: url(../images/Home/sb-home-slide1A-320.jpg);
+		background-size: 100% 100%
+	}
+	.kids-slider.slide2 {
+		background-image: url(../images/Home/sb-home-slide1-320.jpg);
+		background-size: 100% 100%
+	}
+
+	.kids-slider.slide3 {
+		background-image: url(../images/Home/sb-home-slide2-320.jpg);
+		background-size: 100% 100%
+	}
+
+	.kids-slider.slide4 {
+		background-image: url(../images/Home/sb-home-slide3-320.jpg);
+		background-size: 100% 100%
+	}
+
+	.kids-slider.slide5 {
+		background-image: url(../images/Home/sb-home-slide4-320.jpg);
+		background-size: 100% 100%
+	}
+    .bx-wrapper .bx-prev {
+        left: -20%
+    }
+}
+
+@media (max-width:320px) {
+    .bx-wrapper .bx-next {
+        right: -25px
+    }
+    .bx-wrapper .bx-prev {
+        left: -27px
+    }
+}
+
+@media (min-width:768px) {
+	.kids-slider.slide1 {
+		background-image: url(../images/Home/sb-home-slide1A-768.jpg);
+		background-size: 100% 100%
+	}
+	.kids-slider.slide2 {
+		background-image: url(../images/Home/sb-home-slide1-768.jpg);
+		background-size: 100% 100%
+	}
+
+	.kids-slider.slide3 {
+		background-image: url(../images/Home/sb-home-slide2-768.jpg);
+		background-size: 100% 100%
+	}
+
+	.kids-slider.slide4 {
+		background-image: url(../images/Home/sb-home-slide3-768.jpg);
+		background-size: 100% 100%
+	}
+
+	.kids-slider.slide5 {
+		background-image: url(../images/Home/sb-home-slide4-768.jpg);
+		background-size: 100% 100%
+    }
+    .promos {        
+        padding: 0 15px;
+    }
+}
+
+@media (min-width:992px) {
+.kids-slider.slide1 {
+    background-image: url(../images/Home/sb-home-slide1A-1200.jpg);
+    background-size: 100% 100%
+}
+.kids-slider.slide2 {
+    background-image: url(../images/Home/sb-home-slide1-1200.jpg);
+    background-size: 100% 100%
+}
+
+.kids-slider.slide3 {
+    background-image: url(../images/Home/sb-home-slide2-1200.jpg);
+    background-size: 100% 100%
+}
+
+.kids-slider.slide4 {
+    background-image: url(../images/Home/sb-home-slide3-1200.jpg);
+    background-size: 100% 100%
+}
+
+.kids-slider.slide5 {
+    background-image: url(../images/Home/sb-home-slide4-1200.jpg);
+    background-size: 100% 100%
+}
+}
+
+
+ 
+    .sliders-container  .panel-default>.panel-heading+.panel-collapse>.panel-body {
+        height: 440px;
+        overflow: hidden;
+    }
+    .overlay {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 70px;
+        left: 0;
+        background-color: rgb(0,0,0);
+        background-color: rgba(0,0,0, 0.9);
+        overflow-x: hidden;
+        transition: 0.25s;
+      }
+      .open .overlay {        
+        width: 100%;        
+      }

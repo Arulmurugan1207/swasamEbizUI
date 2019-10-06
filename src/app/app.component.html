@@ -1,0 +1,222 @@
+<div class='header_container'>
+    <header >
+        <nav class="navbar sws-container">
+                <div class="container-fluid pd-0">
+                <div class="logo-wrapper">
+                <div class="logo pull-left m-0" routerLink='/home'></div>
+                  <i class="pointer-cursor fa fa-bars" data-toggle="dropdown"></i>
+                  <div class="overlay"></div>
+                    <nav class="main-menu navbar navbar-default dropdown-menu">
+
+                        <ul class="nav navbar-nav header-nav">
+                            <li routerLinkActive="active"><a routerLink='/home'><i class="fa fa-home" aria-hidden=true></i>&nbsp;&nbsp;Home</a>
+                            </li>
+                            <li routerLinkActive="active"><a routerLink='/books/page/1'><i class="fa fa-book" aria-hidden=true></i>&nbsp;&nbsp;Books</a>
+                            </li>
+                            <li routerLinkActive="active"><a routerLink='/text-books' ><i class="fa fa-tags" aria-hidden=true></i>&nbsp;&nbsp;TEXT Books</a>
+                            </li>
+                            <li routerLinkActive="active"><a routerLink='/customers'><i class="fa fa-building-o" aria-hidden=true></i>&nbsp;&nbsp;Schools / Libraries</a>
+                            </li>
+                            <!--<li routerLinkActive="active"><a routerLink='/giftfinder' ><i class="fa fa-gift" aria-hidden=true></i>&nbsp;&nbsp;Gift finder</a>
+                            </li>-->
+                            <li routerLinkActive="active"><a routerLink='/aboutus' ><i class="fa fa-users" aria-hidden=true></i>&nbsp;&nbsp;About Us</a>
+                            </li>
+                            <li routerLinkActive="active"><a routerLink='/contactus' ><i class="fa fa-phone" aria-hidden=true></i>&nbsp;&nbsp;Contact Us</a>
+                            </li>
+                            <li *ngIf="isUserLogged" routerLinkActive="active" ><a routerLink='/myOrders'><i class="fa fa-list-alt" aria-hidden="true"></i>&nbsp;&nbsp;My Orders</a></li>
+                            <li *ngIf="isUserLogged" routerLinkActive="active" ><a routerLink='/myAccount'><i class="fa fa-address-card-o" aria-hidden="true"></i>&nbsp;&nbsp;My Account</a></li>
+                        </ul>
+                      </nav>
+                    </div>
+                  <div class="serach-section">
+                  <form class="navbar-form navbar-left hidden-xs" autocomplete="off">
+                    <div class="input-group">
+                      <input type="text" class="form-control" placeholder="Search" id="search" name="search">
+                      <div class="input-group-btn" style="width: 87px;">
+                        <button style="border:0" (click)="globalSearch($event)" class="btn btn-default" type="submit">
+                          <i class="glyphicon glyphicon-search"></i> <span class="srchTxt hidden-xs hidden-sm">Search</span>
+                        </button>
+                      </div>
+                    </div>
+                  </form>
+                  <ul class="account-menu nav navbar-nav navbar-right">
+                    <li><a class="cartList" style="padding: 0;"  routerLink='/cartitems'>
+                        <svg-icon class="cart svg" data-toggle=modal [svgStyle]="{'width.px':'35','height':'35'}" href='cartitems' src='assets/images/Header/sb-shoppingcart.svg'></svg-icon>
+                        <span class="cartcount badge">{{cartcount}}</span>
+                        <div class="alert alert-success cart-success hidden">
+                                <span class="caret caret-8"></span>
+                            <strong>Success!</strong> One new book has been added to you cart.
+                          </div>
+                        <strong class="small line pull-right hidden">My Cart</strong>
+
+                    </a></li>
+                    <li *ngIf="!isUserLogged"><a routerLink='/register'><span class="glyphicon glyphicon-user"></span> <span class="hidden-xs hidden-sm"> Sign Up</span></a></li>
+                    <li *ngIf="!isUserLogged"><a routerLink='/login'><span class="glyphicon glyphicon-log-in"></span> <span class="hidden-xs hidden-sm"> Login</span></a></li>
+                    <li class="myself" *ngIf="isUserLogged"><a><span class="glyphicon glyphicon-user"></span> <span class="hidden-xs">{{user.firstname}}</span> <span class="caret"></span></a>
+                        <ul class="list-group myAcc-details">
+                            <li class="visible-xs list-group-item"><a>Hi!, {{user.firstname}}</a></li>
+                            <li class="list-group-item"><a routerLink='/myOrders'><i class="fa fa-list-alt" aria-hidden="true"></i> My Orders</a></li>
+                            <li class="list-group-item"><a routerLink='/myAccount'><i class="fa fa-address-card-o" aria-hidden="true"></i> My Account</a></li>
+                            <li class="list-group-item"><a routerLink='/login'><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+                          </ul>
+                    </li>
+                  </ul>
+                </div>
+                </div>
+              </nav>
+    </header>
+
+</div>
+
+<!-- <h2>
+  {{title}}
+</h2> -->
+<!-- <button>Start Animation</button> -->
+
+<!-- <div id="as" style="border:1px solid #555;border-radius:3px;color:white;background:#555;height:105px;width:260px;position:relative; margin-top:10px">jQuery</div> -->
+<main>
+    <router-outlet></router-outlet>
+</main>
+
+<footer id>
+
+    <div class=footerUtilities>
+        <div class=sws-container>
+            <div class="col-sm-12 subscribe_container">
+            </div>
+            <div class=col-sm-3>
+                <div class=widget-container>
+                    <h3 class=widget-title>INFORMATION</h3>
+                    <div class=widget-body>
+                        <ul class=address>
+                            <li><i class="fa fa-map-marker" aria-hidden=true></i>&nbsp;#5, Castle Valley,</li>
+                            <li>Near Casa Grande,</li>
+                            <li>Vengadamangalam Main Road,</li>
+                            <li>Ponmar, Chennai</li>
+                            <li><i class="fa fa-phone" aria-hidden=true></i>&nbsp;+91 81480-66645</li>
+                            <li><i class="fa fa-envelope" aria-hidden=true></i>&nbsp;sales@swasambookart.com</li>
+                            <li>FOLLOW WITH US</li>
+                            <ul>
+                                <li><a class="btn btn-social-icon btn-facebook" target=_blank href='https://www.facebook.com/groups/swasambookart'><span class="fa fa-facebook"></span></a>
+                                    <a class="btn btn-social-icon btn-twitter" target=_blank href='https://twitter.com/swasambookart'><span class="fa fa-twitter"></span></a>
+                                    <a class="btn btn-social-icon btn-google" target=_blank href='https://plus.google.com/communities/103317081103083340023'><span class="fa fa-google-plus"></span></a>
+                                    <a class="btn btn-social-icon btn-whatsapp" target=_blank href=''><span class="fa fa-whatsapp"></span>
+</a></li>
+                            </ul>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class=col-sm-3>
+                <div class=widget-container>
+                    <h3 class=widget-title>COMPANY</h3>
+                    <div class=widget-body>
+                        <ul>
+                            <li><a routerLink='/aboutus'>About Us</a></li>
+                            <li><a routerLink="/info" [queryParams]="{query:'privacy'}">Privacy Policy</a></li>
+                            <li><a routerLink="/info" [queryParams]="{query:'tnc'}">Disclaimers and Terms & Conditions</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class=col-sm-3>
+                <div class=widget-container>
+                    <h3 class=widget-title>MY ACCOUNT</h3>
+                    <div class=widget-body>
+                        <ul>
+                            <li><a routerLink='/cartitems'>My Cart</a></li>
+                            <li class="hidden"><a routerLink='/wishitems'>My Wishlist</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class=col-sm-3>
+                <div class=widget-container>
+                    <h3 class=widget-title>SUPPORT</h3>
+                    <div class=widget-body>
+                        <ul>
+                            <li><a routerLink="/info" [queryParams]="{query:'how2order'}">How to Order</a></li>
+                            <li><a routerLink="/info" [queryParams]="{query:'payment'}">Payment</a></li>
+                            <li><a routerLink="/info" [queryParams]="{query:'shipping'}">Shipping</a></li>
+                            <li><a routerLink="/info" [queryParams]="{query:'returncancel'}">Return and Cancellation</a></li>
+                            <li><a routerLink='/contactus'>Feedback</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 footer-bottom-wapper">
+                <div class="row col-sm-6">
+                    <div class=footer-coppyright>
+                        <p>&nbsp;&copy; 2016 Swasam Bookart, All rights reserved. Powered by Swasam Technologies.</p>
+                    </div>
+                </div>
+                <div class="col-sm-6 text-right">
+                    <div class=footer-payment-logo>
+                        <img src='assets/images/Footer/sb-payment.jpg' style=height:20px;display:inline-block title="Payment Options" alt="Payment Options" class=img-responsive>
+                        <span id=siteseal></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<div class=sharebtns-container>
+    <a class="btn btn-social-icon btn-facebook" target=_blank href='https://www.facebook.com/groups/swasambookart'>
+<span class="fa fa-facebook"></span>
+</a>
+    <a class="btn btn-social-icon btn-twitter" target=_blank href='https://twitter.com/swasambookart'>
+<span class="fa fa-twitter"></span>
+</a>
+    <a class="btn btn-social-icon btn-google" target=_blank href='https://plus.google.com/communities/103317081103083340023'>
+<span class="fa fa-google-plus"></span>
+</a>
+    <a class="btn btn-social-icon btn-whatsapp" target=_blank href=''>
+<span class="fa fa-whatsapp"></span>
+</a>
+</div>
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-lg">
+
+      <!-- Modal content-->
+      <div class="modal-content ">
+        <div class="modal-header hidden text-center">
+
+          <!--<h2 class="modal-title" style="display:inline-block"><span class="bookinfo bold">{{pickedbook.bookname}}</span></h2>-->
+        </div>
+        <div class="modal-body">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <div class="row col-sm-12 addCart-container">
+                        <div class="col-sm-4 detailedBook">
+                            <img class="" src="{{pickedbook.imagepath}}">
+                        </div>
+                        <div class="col-sm-8">
+
+                            <div class="col-sm-12  pd-0 wishCart-infoGroup">
+                                <h2 class="modal-title" style="display:inline-block"><span class="bookinfo bold">{{pickedbook.bookname}}</span></h2>
+                                <p><span class="label">Author Name</span><span class="bookinfo">{{pickedbook.authorname}}</span></p>
+                                <!--<p><span class="label">ISBN Code</span><span class="bookinfo">{{pickedbook.isbncode}}</span></p>
+                                 <p><span class="label">Book Name</span><span class="bookinfo bold">{{pickedbook.bookname}}</span></p> -->
+                                <p><span class="label">Age</span><span class="bookinfo">{{pickedbook.age}}</span></p>
+                                <p><span class="label">Book Type</span><span class="bookinfo">{{pickedbook.booktype}}</span></p>
+
+                                <p><span class="label">Publisher Name</span><span class="bookinfo">{{pickedbook.publishername}}</span></p>
+                                <p><span class="label">Price</span><span class="bookinfo bold price">{{pickedbook.price}}</span></p>
+                                <p><span class="label">Decscripion</span><span class="bookinfo">{{pickedbook.bookdescription}}</span></p>
+                            </div>
+                        </div>
+
+
+                    </div>
+        </div>
+        <div class="modal-footer">
+                <a type="button" class="btn btn-success" data-dismiss="modal" (click)="addToCartlist()">Add to cart</a>
+                <a type="button" class="btn btn-danger hidden" data-dismiss="modal" >Close</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!-- Modal -->
+  <div class="gototop" (click)="topFunction()" style="display: block;"><i class="fa fa-arrow-circle-up" aria-hidden="true"></i></div>
+  <div id="divLoading" *ngIf="showLoader"></div>

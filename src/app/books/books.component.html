@@ -1,0 +1,66 @@
+
+
+<div class="main" data-block="product">
+	<div class="sws-container">
+		<i class="fa fa-filter hidden-sm hidden-md hidden-lg" aria-hidden="true" data-toggle="collapse" data-target="#closeFilter"></i>
+		<div class="col-sm-3 sidebar collapse" id="closeFilter">
+			<app-filters (filtered)="onFiltered($event)" ></app-filters>
+		</div>
+		<div class="col-sm-9 applied-filters" *ngIf="showFilterDetails">
+			<h4>Selected Criteria</h4>
+			<div class="AFTitle Age-filters" *ngIf="filters.age">
+				<span *ngFor="let filter of filters.age">
+					Age : {{filter}},
+				</span>
+
+			</div>
+			<div class="AFTitle Disc-filters" *ngIf="filters.offerpercentage">
+					<span *ngFor="let filter of filters.offerpercentage">
+							Discount : {{filter}},
+						</span>
+			</div>
+			<div class="AFTitle Price-filters" *ngIf="filters.pricecategory">
+					<span *ngFor="let filter of filters.pricecategory">
+							Price : {{filter}},
+						</span>
+			</div>
+			<div class="AFTitle BookType-filters" *ngIf="filters.booktype"><span *ngFor="let filter of filters.booktype">
+					Book Type : {{filter}},
+				</span>
+			</div>
+			<span class="clearFilter clearAll" (click)=click()>Clear All</span>
+		</div>
+		<div class="col-sm-9 booksContainer" id="projects-list">
+      <h2 class="text-center">
+        <span *ngIf="!isNCERT && searchQueryParam===''">All Books(Non-NCERT)</span>
+        <span *ngIf="isNCERT && searchQueryParam===''">NCERT Books (Class {{classNumber}})</span>
+        <span *ngIf="searchQueryParam !=''">Search results for "{{searchQueryParam}}"</span>
+      </h2>
+			<books-list *ngFor="let allbook of pagedItems" [book]="allbook" (pickedbook)="onPickedBookget($event)"></books-list>
+		</div>
+
+		<div class="col-sm-9 no-data" *ngIf="pagedItems.length===0">Books are not available now for the selected criteria.</div>
+		<!-- pager -->
+		<div class="container-fluid col-sm-9 col-sm-offset-3 text-right">
+    <div class=clearfix></div>
+		<ul [ngClass]="(pager.pages && pager.pages.length) ? '': 'hide'" class="pagination col-sm-offset-6">
+				<li [ngClass]="{disabled:pager.currentPage <= 1}">
+						<a routerLink='/books/page/1'>First</a>
+				</li>
+				<li [ngClass]="{disabled:pager.currentPage <= 1}">
+						<a routerLink='/books/page/{{pager.currentPage - 1}}'>Previous</a>
+				</li>
+				<li *ngFor="let page of pager.pages" [ngClass]="{active:pager.currentPage === page}">
+						<a routerLink='/books/page/{{page}}'>{{page}}</a>
+				</li>
+				<li [ngClass]="{disabled:pager.currentPage === pager.totalPages}">
+						<a routerLink='/books/page/{{pager.currentPage + 1}}'>Next</a>
+				</li>
+				<li [ngClass]="{disabled:pager.currentPage === pager.totalPages}">
+						<a routerLink='/books/page/{{pager.totalPages}}'>Last</a>
+				</li>
+		</ul>
+	</div>
+	</div>
+  <div class="gototop"><i class="fa fa-arrow-circle-up" aria-hidden="true"></i></div>
+</div>

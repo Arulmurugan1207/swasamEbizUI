@@ -1,0 +1,26 @@
+<div  class="col-xs-12 col-sm-6 col-md-4 col-lg-3 product" >
+  <div class="product-inner-container">
+      <a class="display-block" title="{{book.bookname}}" data-tracking-id="" (click)="pickBook(book.id,'')" attr.data-offer="{{book.offerindicator}}" data-toggle="modal" data-target="#myModal">
+          <div class="image-wrap" data-tracking-id="">
+              <img class="product-image" alt="{{book.bookname}} {{book.id}}" src="https://www.swasambookart.com/{{book.imagepath}}">
+          </div>
+      </a>
+      <div class="product-info-container">
+
+          <div class="price-offer-container pull-left price-cont"><span class=""><i class="fa fa-inr" aria-hidden="true">&nbsp;</i></span>
+            <span class="price">{{book.price}}</span>
+            <span *ngIf="book.offerpercentage>0" class="originalPrice">(&#8377;{{book.price}})</span>
+          </div>
+          <div class="clearfix"></div>
+          <div class="product-title">{{book.bookname}}</div>
+          <div class="price-offer-container hidden type-cont"><span class="booktype">{{book.booktype}}</span></div>
+          <div class="price-offer-container hidden pull-right age-cont"><span class="age ">{{book.age}}</span></div>
+          <div class='offer hidden'>{{book.offerpercentage}}</div>
+          <div class="col-xs-12 product-dtls">
+                <a type="button" (click)="pickBook(book.id,'cart')" class="btn btn-success btn-block pull-left">Add to Cart</a>
+                <a type="button" id="{{book.id}}" (click)="pickBook(book.id,'')" attr.data-offer="{{book.offerindicator}}" data-toggle="modal" data-target="#myModal" class="btn btn-primary pull-right hidden"><span class="glyphicon glyphicon-eye-open"></span> details</a>
+              </div>
+      </div>
+
+  </div>
+</div>

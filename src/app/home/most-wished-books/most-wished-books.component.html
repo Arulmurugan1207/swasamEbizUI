@@ -1,0 +1,32 @@
+<ul class="col-sm-12 mwbSlider promos" id="mwbSlider1"> 
+        <h2 [hidden]="!showTitle" class="hc-title text-center">MOST WISHED FOR IN BOOKS</h2>      
+    <li *ngFor="let book of mostwishedbooks">
+        <div class="col-xs-12 col-sm-4 col-md-3 product" id="{{book.id}}" attr.data-offer="{{book.offerindicator}}">
+            <div class="product-inner-container">
+                <div class="col-xs-12 product-dtls hidden"><i class="fa fa-heart-o" aria-hidden="true" title="Add to Whishlist"></i><i class="fa fa-cart-plus" aria-hidden="true" title="Add to Cart"></i></div>
+
+                <a class="display-block" data-toggle="modal" data-target="#myModal" (click)="viewBook(book.id)" title="{{book.bookname}}" data-tracking-id="">
+                    <div class="image-wrap" data-tracking-id="">
+                        <img class="product-image"  alt="{{book.bookname}} {{book.id}}" src="{{book.imagepath}}">
+                    </div>
+                </a>
+                <div class="product-info-container">          
+
+                    <div class="price-offer-container pull-left price-cont"><span class=""><i class="fa fa-inr" aria-hidden="true">&nbsp;</i></span>
+                        <span class="price">{{book.price}}</span>
+                        <span *ngIf="book.offerpercentage>0" class="originalPrice">(&#8377;{{book.price}})</span>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="product-title">{{book.bookname}}</div>
+                    <div class="price-offer-container hidden type-cont"><span class="booktype">{{book.booktype}}</span></div>
+                    <div class="price-offer-container hidden pull-right age-cont"><span class="age ">{{book.age}}</span></div>
+                    <div class='offer hidden'>{{book.offerpercentage}}</div>
+                    <div class="col-xs-12 product-dtls">
+                          <a type="button" (click)="pickBook(book.id,'cart')" class="btn btn-success btn-block pull-left">Add to Cart</a>
+                          <a type="button" id="{{book.id}}" (click)="pickBook(book.id)" attr.data-offer="{{book.offerindicator}}" data-toggle="modal" data-target="#myModal" class="btn btn-primary pull-right hidden"><span class="glyphicon glyphicon-eye-open"></span> details</a>            
+                        </div>
+                </div>
+            </div>
+        </div>
+    </li>
+</ul>

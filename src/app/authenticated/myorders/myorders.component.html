@@ -1,0 +1,21 @@
+<div class="main" data-block="cartItems">
+  <div class="sws-container col-xs-12 col-sm-10">
+  <h2>My Orders</h2>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Order Id</th>
+        <th>Order Status</th>
+        <th>Total Amount</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let order of orders">
+        <td><a routerLink ="/myOrders/{{order._id}}">{{order._id}}</a> </td>
+        <td>In progress...</td>
+        <td>{{order.totalAmount}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</div>

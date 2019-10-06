@@ -1,0 +1,69 @@
+<div class="main-container" data-block="customers">
+    <div class="sws-container">
+        <div class="col-sm-12">
+        </div>
+    </div>
+</div>
+<div class="test" data-block="cust-info">
+    <div class="sws-container">
+        <div class="col-sm-6">
+                <h3 class="feedback_title text-center">Share your query</h3>
+                <form name="contact_info" class="form-horizontal" id="contact_info" role="form" (ngSubmit)="onContactFormSubmit(f)" #f="ngForm">
+                    <div class="form-inner-container">
+                        <input type="hidden" class="form-control" id="totalPrce">
+                        <div class="form-group">
+                            <label for="contactname" class="control-label col-sm-2">Name</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="contactname"
+                                name="contactname"
+                                ngModel
+                                #contactname="ngModel"
+                                placeholder="Enter your Name" required/>
+                                <div [hidden]="contactname.valid || contactname.pristine"  class="col-xs-12 alert alert-danger m-0">Enter valid name without any special charercters or numbers</div>
+                            </div>
+
+                        </div>
+                        <div class="form-group">
+                            <label for="contactemail" class="control-label col-sm-2">Email</label>
+                            <div class="col-sm-10">
+                                <input type="email" class="form-control" [pattern]="emailPattern"
+                                id="contactemail"
+                                name="contactemail" placeholder="Enter your Email Id"
+                                ngModel
+                                #contactemail="ngModel"
+                                required/>
+                                  <div [hidden]="contactemail.valid || contactemail.pristine"  class="col-xs-12 alert alert-danger m-0">Enter valid Email</div>
+                            </div>
+                        </div>
+                        <div class="form-group mobile">
+                            <label for="contactmobile" class="control-label col-sm-2">Mobile</label>
+                            <div class="col-sm-10">
+                                <input type="text" value="+91" disabled="disabled" class="form-control country-code">
+                                <input type="text" maxlength="10" class="form-control mobile-number" id="contactmobile" name="contactmobile" placeholder="Enter your Contact Number"
+                                oninput="this.value=this.value.replace(/[^0-9]/g,'');"
+                                ngModel
+                                #contactmobile="ngModel"
+                                required/>
+                                <div [hidden]="contactmobile.valid || contactmobile.pristine"  class="col-xs-12 alert alert-danger m-0">Enter valid 10 digit mobile number</div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactcomment" class="control-label col-sm-2">Comment</label>
+                            <div class="col-sm-10">
+                                <textarea class="form-control" rows="" id="contactcomment" name="contactcomment" placeholder="Enter your comment" value=""></textarea>
+                            </div>
+                        </div>                        
+                        <button [disabled]="!f.valid" type="submit" id="submit" class="btn btn-primary btn-lg btn-block"><i class="fa fa-check" aria-hidden="true"></i><span>&nbsp;Submit</span></button>
+                    </div>
+                </form>
+            
+        </div>
+        <div class="col-sm-6 customer_info">
+                <h3 class="text-center">Swasam Bookart for Schools</h3>
+                <p class="text-justify">Support every level of students education with our books. Our books are trusted by teachers and education professionals everywhere for their impeccable quality, and are guaranteed to engage, educate and entertain children of all ages.<br></p>
+                <strong>Celebrate reading with Us</strong>
+                <p class="text-justify">Whether you're looking to hold a book fair or <strong>LIBRARY</strong> or sponsored reading event your school can benefit from generous offers, <strong>exclusive special discounts</strong> through our Independent Swasam Bookart Organisers. Your local Independent Swasam Bookart Organiser will not only discuss what is best for you and your school, they will also plan, organise, attend and supervise the whole event, to help you concentrate on teaching.</p>
+                Contact us to book your event!.
+                </div>
+    </div>
+</div>

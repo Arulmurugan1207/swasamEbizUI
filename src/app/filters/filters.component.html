@@ -1,0 +1,77 @@
+
+<i class="fa fa-times-circle-o visible-xs filter-opened close-filter" data-toggle="collapse" data-target="#closeFilter" aria-hidden="true"></i>
+
+<div class="container-fluid pd-0">
+<h3 class="filter-title visible-xs">Filters</h3>
+<h2 class="filter_title">Discount</h2>
+<ul class="list-group discount"> <span class="clearFilter" (click)="discountClear()">Clear</span>
+    <li class="list-group-item">
+        <a class="checkbox"><label><input type="checkbox" value="0-10" (change)="addDiscountfilter($event)">Less than 10%</label></a>
+    </li>
+
+    <li class="list-group-item">
+        <a class="checkbox"><label><input type="checkbox" value="41-50" (change)="addDiscountfilter($event)">10% - 50%</label></a>
+    </li>
+    <li class="list-group-item">
+        <a class="checkbox"><label><input type="checkbox" value="51-75" (change)="addDiscountfilter($event)">Greater than 50%</label></a>
+    </li>
+</ul>
+<h2 class="filter_title">Price</h2>
+<ul class="list-group price"><span class="clearFilter" (click)="priceClear()">Clear</span>
+    <li class="list-group-item">
+        <a class="checkbox"><label><input type="checkbox" value="1Rs-25Rs"  (change)="addPricefilter($event)">&#8377; Less than 100</label></a>
+    </li>
+    <li class="list-group-item">
+        <a class="checkbox"><label><input type="checkbox" value="25Rs-50Rs" (change)="addPricefilter($event)">&#8377; 101 - 500</label></a>
+    </li>
+    <li class="list-group-item">
+        <a class="checkbox"><label><input type="checkbox" value="50Rs-75Rs" (change)="addPricefilter($event)">&#8377; Greater than 500</label></a>
+    </li>
+
+</ul>
+<h2 class="filter_title"><a [class.active]="!isNCERT" routerLink='/books/page/1' class="" >General Books</a></h2>
+
+<h2 routerLinkActive="active" class="filter_title">
+        <a *ngIf="!isNCERT" routerLinkActive="active" routerLink='/text-books' [queryParams]="{query:'ncert'}" class="" >NCERT Books</a>
+        <a *ngIf="isNCERT" [class.active]="isNCERT">NCERT Books</a>
+</h2>
+<ul *ngIf="isNCERT" class="list-group class"><span class="clearFilter hidden" (click)="priceClear()">Clear</span>
+    <li class="list-group-item">
+            <a routerLinkActive="active" routerLink='/ncert-books/class/1' class="classType" >Class 1</a>
+    </li>
+    <li class="list-group-item">
+            <a routerLinkActive="active" routerLink='/ncert-books/class/2' class="classType" >Class 2</a>
+    </li>
+    <li class="list-group-item">
+            <a routerLinkActive="active" routerLink='/ncert-books/class/3' class="classType" >Class 3</a>
+    </li>
+    <li class="list-group-item">
+            <a routerLinkActive="active" routerLink='/ncert-books/class/4' class="classType" >Class 4</a>
+    </li>
+    <li class="list-group-item">
+            <a routerLinkActive="active" routerLink='/ncert-books/class/5' class="classType" >Class 5</a>
+    </li>
+    <li class="list-group-item">
+            <a routerLinkActive="active" routerLink='/ncert-books/class/6' class="classType" >Class 6</a>
+    </li>
+    <li class="list-group-item">
+            <a routerLinkActive="active" routerLink='/ncert-books/class/7' class="classType" >Class 7</a>
+    </li>
+    <li class="list-group-item">
+            <a routerLinkActive="active" routerLink='/ncert-books/class/8' class="classType" >Class 8</a>
+    </li>
+    <li class="list-group-item">
+            <a routerLinkActive="active" routerLink='/ncert-books/class/9' class="classType" >Class 9</a>
+    </li>
+    <li class="list-group-item">
+            <a routerLinkActive="active" routerLink='/ncert-books/class/10' class="classType" >Class 10</a>
+    </li>
+    <li class="list-group-item">
+            <a routerLinkActive="active" routerLink='/ncert-books/class/11' class="classType" >Class 11</a>
+    </li>
+    <li class="list-group-item">
+            <a routerLinkActive="active" routerLink='/ncert-books/class/12' class="classType" >Class 12</a>
+    </li>
+
+</ul>
+</div>
